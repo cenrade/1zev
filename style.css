@@ -178,3 +178,7 @@ body.main-grid-page {
   background: black;
   border: 2px solid #f0f0f0;
 }
+body.main-grid-page {
+  justify-content: flex-start;
+  min-height: auto;
+}
