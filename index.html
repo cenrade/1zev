@@ -8,7 +8,6 @@
   <body>
     <div class="lock-box">
       <h2>??????</h2>
-
       <div class="input-group">
         <input
           type="password"
@@ -17,22 +16,11 @@
           placeholder="6 digits"
         />
       </div>
-
       <button onclick="checkPass()">CONTINUE</button>
       <p id="error-msg" style="display: none; color: red; margin-top: 10px">
         Wrong info, try again.
       </p>
     </div>
-
-    <script>
-      function checkPass() {
-        const pass = document.getElementById("passInput").value;
-        if (pass === "220218") {
-          window.location.href = "main.html";
-        } else {
-          document.getElementById("error-msg").style.display = "block";
-        }
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
