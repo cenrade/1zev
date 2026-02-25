@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>WordsNeverSaid</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="main-grid-page">
+    <div class="header">
+      <h1>WordsNeverSaid</h1>
+      <p>A Collection of things I've always wanted to tell you</p>
+    </div>
+
+    <div class="container">
+      <div
+        class="card blue"
+        onclick="
+          openCard(
+            'you',
+            'I hope you\'re doing well, even if we don\'t talk anymore.',
+          )
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>I hope you're doing well...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#missu</span></div>
+      </div>
+
+      <div
+        class="card pink"
+        onclick="
+          openCard(
+            'M',
+            'I still haven\'t deleted that playlist. Every time a song from it plays, I wonder if you listen to it too.',
+          )
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>I still have the playlist...</p></div>
+        <div class="card-footer">
+          <span>&nbsp;</span><span>#unsentproject</span>
+        </div>
+      </div>
+
+      <div
+        class="card yellow"
+        onclick="
+          openCard(
+            'Past Self',
+            'Everything will make sense eventually. Just keep going. You are stronger than you think.',
+          )
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>It will make sense...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#growth</span></div>
+      </div>
+
+      <div
+        class="card orange"
+        onclick="
+          openCard(
+            'Stranger',
+            'Thank you for holding the door. It made my morning better.',
+          )
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>Small gestures matter...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#kindness</span></div>
+      </div>
+    </div>
+
+    <div id="messageModal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h2 id="modalTo"></h2>
+        <hr style="border: 1px solid black; margin: 20px 0" />
+        <p id="modalBody"></p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
