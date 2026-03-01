@@ -20,10 +20,11 @@ function checkPass() {
 }
 
 // Function to open the modal
-function openCard(toName, fullMessage) {
+function openCard(to, message) {
   const modal = document.getElementById("messageModal");
-  document.getElementById("modalTo").innerText = "To: " + toName;
-  document.getElementById("modalBody").innerText = fullMessage;
+  document.getElementById("modalTo").innerText = "TO: " + to;
+  document.getElementById("modalBody").innerText = message;
+
   modal.style.display = "block";
 }
 
