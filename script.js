@@ -1,4 +1,15 @@
 // Function for index.html login check
+
+const passInput = document.getElementById("passInput");
+
+passInput.addEventListener("keydown", (e) => {
+  // Allow: backspace, delete, tab, escape, enter, and numbers
+  const allowedKeys = ["Backspace", "Delete", "Tab", "Escape", "Enter"];
+  if (allowedKeys.includes(e.key) || (e.key >= "0" && e.key <= "9")) {
+    return;
+  }
+  e.preventDefault(); // Stop the keypress if it's a letter/symbol
+});
 function checkPass() {
   const pass = document.getElementById("passInput").value;
   if (pass === "210218") {

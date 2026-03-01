@@ -7,19 +7,30 @@
   </head>
   <body class="login-page">
     <div class="lock-box">
-      <h2>Lorde, ulit?</h2>
-      <div class="input-group">
-        <input
-          type="password"
-          id="passInput"
-          maxlength="6"
-          placeholder="6 digits"
-        />
+      <div class="window-bar">
+        <div class="dot red"></div>
+        <div class="dot yellow"></div>
+        <div class="dot green"></div>
       </div>
-      <button onclick="checkPass()">CONTINUE</button>
-      <p id="error-msg" style="display: none; color: red; margin-top: 10px">
-        Wrong info, try again.
-      </p>
+      <div class="lock-content">
+        <h2>Lordew??</h2>
+        <div class="input-group">
+          <input
+            type="tel"
+            id="passInput"
+            maxlength="6"
+            placeholder="******"
+            oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          />
+        </div>
+        <button onclick="checkPass()">Continue</button>
+        <p
+          id="error-msg"
+          style="display: none; color: red; margin-top: 15px; font-weight: bold"
+        >
+          Have you forgotten?
+        </p>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
