@@ -1,120 +1,43 @@
-const _0x249ecf = _0x1ee2;
-function _0x3109() {
-  const _0xbe3159 = [
-    "addEventListener",
-    "276617VkYadh",
-    "innerText",
-    "none",
-    "error-msg",
-    "modalTo",
-    "onclick",
-    "228lFShja",
-    "90IFvVpK",
-    "messageModal",
-    "main.html",
-    "849236geElPQ",
-    "7278pORNuy",
-    "value",
-    "10OushKr",
-    "passInput",
-    "3658237NtJQWV",
-    "style",
-    "display",
-    "TO:\x20",
-    "Delete",
-    "getElementById",
-    "Backspace",
-    "Escape",
-    "keydown",
-    "368mJGLER",
-    "6915XXrnKq",
-    "location",
-    "2404220oGeuyJ",
-    "key",
-    "preventDefault",
-    "modalBody",
-    "block",
-    "Tab",
-    "173512mKSayX",
-  ];
-  _0x3109 = function () {
-    return _0xbe3159;
-  };
-  return _0x3109();
-}
-(function (_0x103e16, _0x39d18c) {
-  const _0x2cb4ef = _0x1ee2,
-    _0x259bc3 = _0x103e16();
-  while (!![]) {
-    try {
-      const _0x4426ca =
-        -parseInt(_0x2cb4ef(0x1d9)) / 0x1 +
-        (parseInt(_0x2cb4ef(0x1f1)) / 0x2) *
-          (parseInt(_0x2cb4ef(0x1e4)) / 0x3) +
-        parseInt(_0x2cb4ef(0x1e3)) / 0x4 +
-        (parseInt(_0x2cb4ef(0x1f2)) / 0x5) *
-          (parseInt(_0x2cb4ef(0x1df)) / 0x6) +
-        parseInt(_0x2cb4ef(0x1f4)) / 0x7 +
-        (parseInt(_0x2cb4ef(0x1d7)) / 0x8) *
-          (-parseInt(_0x2cb4ef(0x1e0)) / 0x9) +
-        (-parseInt(_0x2cb4ef(0x1e6)) / 0xa) *
-          (parseInt(_0x2cb4ef(0x1e8)) / 0xb);
-      if (_0x4426ca === _0x39d18c) break;
-      else _0x259bc3["push"](_0x259bc3["shift"]());
-    } catch (_0x2d3917) {
-      _0x259bc3["push"](_0x259bc3["shift"]());
-    }
-  }
-})(_0x3109, 0x37d19);
-function _0x1ee2(_0x5d3d01, _0x28c164) {
-  _0x5d3d01 = _0x5d3d01 - 0x1d5;
-  const _0x31096c = _0x3109();
-  let _0x1ee258 = _0x31096c[_0x5d3d01];
-  return _0x1ee258;
-}
-const passInput = document[_0x249ecf(0x1ed)](_0x249ecf(0x1e7));
-passInput[_0x249ecf(0x1d8)](_0x249ecf(0x1f0), (_0x567a48) => {
-  const _0x3d960e = _0x249ecf,
-    _0x427cdc = [
-      _0x3d960e(0x1ee),
-      _0x3d960e(0x1ec),
-      _0x3d960e(0x1d6),
-      _0x3d960e(0x1ef),
-      "Enter",
-    ];
-  if (
-    _0x427cdc["includes"](_0x567a48[_0x3d960e(0x1f5)]) ||
-    (_0x567a48[_0x3d960e(0x1f5)] >= "0" && _0x567a48[_0x3d960e(0x1f5)] <= "9")
-  )
+// Function for index.html login check
+
+const passInput = document.getElementById("passInput");
+
+passInput.addEventListener("keydown", (e) => {
+  // Allow: backspace, delete, tab, escape, enter, and numbers
+  const allowedKeys = ["Backspace", "Delete", "Tab", "Escape", "Enter"];
+  if (allowedKeys.includes(e.key) || (e.key >= "0" && e.key <= "9")) {
     return;
-  _0x567a48[_0x3d960e(0x1f6)]();
+  }
+  e.preventDefault(); // Stop the keypress if it's a letter/symbol
 });
 function checkPass() {
-  const _0x44bd9e = _0x249ecf,
-    _0x60dbb7 = document[_0x44bd9e(0x1ed)](_0x44bd9e(0x1e7))[_0x44bd9e(0x1e5)];
-  _0x60dbb7 === "210218"
-    ? (window[_0x44bd9e(0x1f3)]["href"] = _0x44bd9e(0x1e2))
-    : (document[_0x44bd9e(0x1ed)](_0x44bd9e(0x1dc))[_0x44bd9e(0x1e9)][
-        "display"
-      ] = _0x44bd9e(0x1d5));
+  const pass = document.getElementById("passInput").value;
+  if (pass === "210218") {
+    window.location.href = "main.html";
+  } else {
+    document.getElementById("error-msg").style.display = "block";
+  }
 }
-function openCard(_0x5e52ae, _0x3fba57) {
-  const _0x15bc88 = _0x249ecf,
-    _0x4a2b30 = document[_0x15bc88(0x1ed)](_0x15bc88(0x1e1));
-  ((document[_0x15bc88(0x1ed)](_0x15bc88(0x1dd))[_0x15bc88(0x1da)] =
-    _0x15bc88(0x1eb) + _0x5e52ae),
-    (document[_0x15bc88(0x1ed)](_0x15bc88(0x1f7))[_0x15bc88(0x1da)] =
-      _0x3fba57),
-    (_0x4a2b30[_0x15bc88(0x1e9)][_0x15bc88(0x1ea)] = "block"));
+
+// Function to open the modal
+function openCard(to, message) {
+  const modal = document.getElementById("messageModal");
+  document.getElementById("modalTo").innerText = "TO: " + to;
+  document.getElementById("modalBody").innerText = message;
+
+  modal.style.display = "block";
 }
+
+// Function to close the modal
 function closeModal() {
-  const _0x290404 = _0x249ecf,
-    _0x1a5780 = document[_0x290404(0x1ed)](_0x290404(0x1e1));
-  _0x1a5780[_0x290404(0x1e9)][_0x290404(0x1ea)] = _0x290404(0x1db);
+  const modal = document.getElementById("messageModal");
+  modal.style.display = "none";
 }
-window[_0x249ecf(0x1de)] = function (_0x384d39) {
-  const _0x2b4109 = _0x249ecf,
-    _0x4c47ce = document[_0x2b4109(0x1ed)](_0x2b4109(0x1e1));
-  _0x384d39["target"] == _0x4c47ce &&
-    (_0x4c47ce[_0x2b4109(0x1e9)][_0x2b4109(0x1ea)] = _0x2b4109(0x1db));
+
+// Close when clicking outside the box
+window.onclick = function (event) {
+  const modal = document.getElementById("messageModal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
 };
