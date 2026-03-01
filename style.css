@@ -248,11 +248,16 @@ body.main-grid-page {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 30px;
+  font-size: 35px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
   color: var(--black);
+  transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
 }
 
 @keyframes popIn {
