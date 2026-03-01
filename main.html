@@ -69,12 +69,60 @@
         <div class="card-content"><p>Small gestures matter...</p></div>
         <div class="card-footer"><span>&nbsp;</span><span>#kindness</span></div>
       </div>
+
+      <div
+        class="card teal"
+        onclick="
+          openCard('M', 'I saw something today that reminded me of you.')
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>Reminders are everywhere...</p></div>
+        <div class="card-footer">
+          <span>&nbsp;</span><span>#remembrance</span>
+        </div>
+      </div>
+
+      <div
+        class="card lavender"
+        onclick="
+          openCard('M', 'The silence between us has its own way of speaking.')
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>Silence speaks volumes...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#untold</span></div>
+      </div>
+
+      <div
+        class="card purple"
+        onclick="
+          openCard('M', 'I hope you found the happiness you were looking for.')
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>Finding happiness...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#wishes</span></div>
+      </div>
+
+      <div
+        class="card red-muted"
+        onclick="
+          openCard(
+            'M',
+            'Sometimes I still start typing a message to you before I remember.',
+          )
+        "
+      >
+        <div class="card-header"><span>&nbsp;</span><span>✖</span></div>
+        <div class="card-content"><p>Unsent drafts...</p></div>
+        <div class="card-footer"><span>&nbsp;</span><span>#habit</span></div>
+      </div>
     </div>
 
     <div id="messageModal" class="modal">
       <div class="modal-content">
         <span class="close-btn" onclick="closeModal()">&times;</span>
-
         <div class="modal-main">
           <h2 id="modalTo"></h2>
           <div class="content-divider"></div>

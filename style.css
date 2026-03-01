@@ -6,6 +6,11 @@
   --pink: #ffb6c1;
   --yellow: #fffacd;
   --orange: #df9c21;
+  --green: #98fb98; /* Mint Green - for growth or fresh starts */
+  --purple: #e0b0ff; /* Mauve/Purple - for nostalgia or deep thoughts */
+  --red-muted: #ff6b6b; /* Soft Red - for more intense or "heart" messages */
+  --teal: #81e6d9; /* Teal - for calm or clarity */
+  --lavender: #c3bef0;
 }
 
 body {
@@ -154,6 +159,21 @@ body.main-grid-page {
 .orange {
   background: var(--orange);
 }
+.green {
+  background: var(--green);
+}
+.purple {
+  background: var(--purple);
+}
+.red-muted {
+  background: var(--red-muted);
+}
+.teal {
+  background: var(--teal);
+}
+.lavender {
+  background: var(--lavender);
+}
 
 .card-header {
   border-bottom: 4px solid var(--black);
@@ -195,34 +215,12 @@ body.main-grid-page {
   width: 90%;
   max-width: 650px;
   position: relative;
-  padding: 0;
+  padding: 40px;
   overflow: hidden;
   animation: popIn 0.4s ease-out;
 }
 
-.modal-inner {
-  display: flex;
-  min-height: 400px;
-}
-
-.modal-sidebar {
-  width: 60px;
-  background: var(--black);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 0;
-  font-size: 11px;
-  font-weight: bold;
-  writing-mode: vertical-rl;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
 .modal-main {
-  flex-grow: 1;
-  padding: 40px;
   position: relative;
 }
 
@@ -250,16 +248,11 @@ body.main-grid-page {
   position: absolute;
   top: 10px;
   right: 15px;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
   color: var(--black);
-  transition: transform 0.2s;
-}
-
-.close-btn:hover {
-  transform: scale(1.2) rotate(90deg);
 }
 
 @keyframes popIn {
