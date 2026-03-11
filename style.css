@@ -131,7 +131,22 @@ body.main-grid-page {
   max-width: 1200px;
   margin: 0 auto;
 }
-
+.card.blue,
+.card.pink,
+.card.yellow,
+.card.orange,
+.card.green,
+.card.purple,
+.card.red-muted,
+.card.teal,
+.card.lavender {
+  background-image:
+    radial-gradient(rgba(0, 0, 0, 0.055) 1px, transparent 1px),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.25), transparent 30%);
+  background-size:
+    18px 18px,
+    100% 100%;
+}
 .card {
   border: 4px solid var(--black);
   box-shadow: 10px 10px 0px var(--black);
@@ -140,6 +155,36 @@ body.main-grid-page {
   min-height: 250px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cardIn 0.5s ease-out forwards;
+}
+.card:nth-child(2) {
+  animation-delay: 0.05s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.1s;
+}
+.card:nth-child(4) {
+  animation-delay: 0.15s;
+}
+@keyframes cardIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.card {
+  border: 3px solid #000;
+  box-shadow: 8px 8px 0px 0px #000; /* Solid black offset shadow */
+  transition: all 0.2s ease;
+}
+
+.card:active {
+  box-shadow: 2px 2px 0px 0px #000; /* "Pressed" effect */
+  transform: translate(4px, 4px);
 }
 
 .card:hover {
@@ -187,6 +232,12 @@ body.main-grid-page {
   flex-grow: 1;
   font-size: 1.1rem;
   line-height: 1.4;
+  /* UPDATED FONT AND ALIGNMENT */
+  font-family: "Space Mono", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .card-footer {
   border-top: 4px solid var(--black);
@@ -260,6 +311,26 @@ body.main-grid-page {
   transform: scale(1.2) rotate(90deg);
 }
 
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-main {
+  animation: slideUp 0.4s ease-out;
+}
+
+#modalBody {
+  line-height: 1.6;
+  font-family: "Space Mono", monospace; /* Keeping that tech/bootleg feel */
+}
+
 @keyframes popIn {
   from {
     transform: scale(0.95);
@@ -269,6 +340,24 @@ body.main-grid-page {
     transform: scale(1);
     opacity: 1;
   }
+}
+.modal {
+  backdrop-filter: blur(2px);
+}
+.modal-content {
+  .modal-content {
+    background:
+      radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
+      #fff;
+  }
+  border-radius: 10px;
+  .card:active {
+    transform: translateY(-2px) scale(0.995);
+  }
+  .card {
+    cursor: pointer;
+  }
+  padding: 32px 32px 26px;
 }
 @keyframes slideDown {
   from {
