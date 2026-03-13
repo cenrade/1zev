@@ -56,7 +56,7 @@ function checkPass() {
     : (document[_0x3c8c37(0x1c5)](_0x3c8c37(0x1ab))[_0x3c8c37(0x1bd)][
         _0x3c8c37(0x1ba)
       ] = _0x3c8c37(0x1cd));
-}
+} //The password is in ur note:)
 function openCard(_0x5ab46a, _0x1d76ee) {
   const _0x50f897 = _0x4c5c32,
     _0x2d6cb4 = document[_0x50f897(0x1c5)]("messageModal");

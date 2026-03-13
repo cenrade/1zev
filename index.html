@@ -2,18 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Locked Page</title>
+    <title>.---- ---..</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body class="login-page">
     <div class="lock-box">
       <div class="window-bar">
-        <div class="dot red"></div>
-        <div class="dot yellow"></div>
-        <div class="dot green"></div>
+        <div class="dot green-ref"></div>
+        <div class="dot yellow-ref"></div>
+        <div class="dot blue-ref"></div>
       </div>
+
       <div class="lock-content">
-        <h2>Again and again</h2>
+        <h2>Unsent who?</h2>
         <div class="input-group">
           <input
             type="tel"
@@ -23,6 +24,7 @@
             oninput="this.value = this.value.replace(/[^0-9]/g, '')"
           />
         </div>
+
         <button onclick="checkPass()">Continue</button>
         <p
           id="error-msg"
@@ -30,6 +32,7 @@
         >
           Have you forgotten?
         </p>
+        <p class="hint-text">gur cva zhfg or va he abgrf ncc</p>
       </div>
     </div>
     <script src="script.js"></script>

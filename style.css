@@ -10,6 +10,10 @@
   --red-muted: #ff6b6b;
   --teal: #81e6d9;
   --lavender: #c3bef0;
+
+  --custom-yellow: #f7cd52;
+  --custom-green: #649c15;
+  --custom-blue: #599edf;
 }
 
 body {
@@ -19,6 +23,23 @@ body {
   padding: 0;
   background-image: radial-gradient(var(--black) 1px, transparent 1px);
   background-size: 25px 25px;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle,
+    transparent 20%,
+    rgba(0, 0, 0, 0.08) 100%
+  );
+  pointer-events: none;
+  z-index: 999;
 }
 
 .login-page {
@@ -35,6 +56,8 @@ body {
   width: 90%;
   max-width: 400px;
   overflow: hidden;
+  position: relative;
+  z-index: 1000;
   animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -53,14 +76,16 @@ body {
   border: 2px solid white;
   border-radius: 50%;
 }
-.red {
-  background: #ff5f56;
+
+/* Circle Colors: Green, Yellow, Blue */
+.dot.green-ref {
+  background: var(--custom-green);
 }
-.yellow {
-  background: #ffbd2e;
+.dot.yellow-ref {
+  background: var(--custom-yellow);
 }
-.green {
-  background: #27c93f;
+.dot.blue-ref {
+  background: var(--custom-blue);
 }
 
 .lock-content {
@@ -86,6 +111,16 @@ body {
   outline: none;
   font-family: inherit;
   text-align: center;
+}
+
+.hint-text {
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 20px;
+  display: block;
+  cursor: help;
+  text-decoration: underline dotted;
 }
 
 .lock-box button {
@@ -125,6 +160,20 @@ body.main-grid-page {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.card {
+  border: 4px solid var(--black);
+  box-shadow: 10px 10px 0px var(--black);
+  display: flex;
+  flex-direction: column;
+  min-height: 250px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  transform: translateY(8px);
+  animation: cardIn 0.5s ease-out forwards;
+}
+
 .card.blue,
 .card.pink,
 .card.yellow,
@@ -141,49 +190,15 @@ body.main-grid-page {
     18px 18px,
     100% 100%;
 }
-.card {
-  border: 4px solid var(--black);
-  box-shadow: 10px 10px 0px var(--black);
-  display: flex;
-  flex-direction: column;
-  min-height: 250px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.card {
-  opacity: 0;
-  transform: translateY(8px);
-  animation: cardIn 0.5s ease-out forwards;
-}
-.card:nth-child(2) {
-  animation-delay: 0.05s;
-}
-.card:nth-child(3) {
-  animation-delay: 0.1s;
-}
-.card:nth-child(4) {
-  animation-delay: 0.15s;
-}
-@keyframes cardIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.card {
-  border: 3px solid #000;
-  box-shadow: 8px 8px 0px 0px #000;
-  transition: all 0.2s ease;
+
+.card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0px var(--black);
 }
 
 .card:active {
   box-shadow: 2px 2px 0px 0px #000;
   transform: translate(4px, 4px);
-}
-
-.card:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 15px 15px 0px var(--black);
 }
 
 .blue {
@@ -221,6 +236,7 @@ body.main-grid-page {
   justify-content: space-between;
   font-weight: bold;
 }
+
 .card-content {
   padding: 25px;
   flex-grow: 1;
@@ -232,6 +248,7 @@ body.main-grid-page {
   justify-content: center;
   text-align: center;
 }
+
 .card-footer {
   border-top: 4px solid var(--black);
   padding: 10px;
@@ -249,6 +266,7 @@ body.main-grid-page {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
 }
 
 .modal-content {
@@ -261,10 +279,10 @@ body.main-grid-page {
   padding: 40px;
   overflow: hidden;
   animation: popIn 0.4s ease-out;
-}
-
-.modal-main {
-  position: relative;
+  background:
+    radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
+    #fff;
+  border-radius: 10px;
 }
 
 #modalTo {
@@ -284,7 +302,7 @@ body.main-grid-page {
 #modalBody {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: #222;
+  font-family: "Space Mono", monospace;
 }
 
 .close-btn {
@@ -295,7 +313,6 @@ body.main-grid-page {
   font-weight: bold;
   cursor: pointer;
   z-index: 10;
-  color: var(--black);
   transition: transform 0.2s;
 }
 
@@ -303,24 +320,24 @@ body.main-grid-page {
   transform: scale(1.2) rotate(90deg);
 }
 
-@keyframes slideUp {
+.hint-text {
+  display: block;
+  font-family: "Space Mono", monospace;
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 15px;
+  text-decoration: none;
+  cursor: help;
+}
+@keyframes slideDown {
   from {
+    transform: translateY(-20px);
     opacity: 0;
-    transform: translateY(20px);
   }
   to {
-    opacity: 1;
     transform: translateY(0);
+    opacity: 1;
   }
-}
-
-.modal-main {
-  animation: slideUp 0.4s ease-out;
-}
-
-#modalBody {
-  line-height: 1.6;
-  font-family: "Space Mono", monospace;
 }
 
 @keyframes popIn {
@@ -333,32 +350,10 @@ body.main-grid-page {
     opacity: 1;
   }
 }
-.modal {
-  backdrop-filter: blur(2px);
-}
-.modal-content {
-  background:
-    radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
-    #fff;
-  border-radius: 10px;
-  padding: 32px 32px 26px;
-}
 
-.modal-content .card:active {
-  transform: translateY(-2px) scale(0.995);
-}
-
-.modal-content .card {
-  cursor: pointer;
-}
-
-@keyframes slideDown {
-  from {
-    transform: translateY(-20px);
-    opacity: 0;
-  }
+@keyframes cardIn {
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }
