@@ -1,4 +1,3 @@
-/* 1. Global Setup */
 :root {
   --bg: #f0f0f0;
   --black: #000000;
@@ -6,10 +5,10 @@
   --pink: #ffb6c1;
   --yellow: #fffacd;
   --orange: #df9c21;
-  --green: #98fb98; /* Mint Green - for growth or fresh starts */
-  --purple: #e0b0ff; /* Mauve/Purple - for nostalgia or deep thoughts */
-  --red-muted: #ff6b6b; /* Soft Red - for more intense or "heart" messages */
-  --teal: #81e6d9; /* Teal - for calm or clarity */
+  --green: #98fb98;
+  --purple: #e0b0ff;
+  --red-muted: #ff6b6b;
+  --teal: #81e6d9;
   --lavender: #c3bef0;
 }
 
@@ -22,7 +21,6 @@ body {
   background-size: 25px 25px;
 }
 
-/* 2. Login Page */
 .login-page {
   display: flex;
   align-items: center;
@@ -44,12 +42,11 @@ body {
   background: var(--black);
   padding: 10px;
   display: flex;
-  gap: 8px; /* Groups dots together with small spacing */
+  gap: 8px;
   border-bottom: 4px solid var(--black);
   margin: -1px -1px 0 -1px;
 }
 
-/* Dots grouped together */
 .dot {
   width: 12px;
   height: 12px;
@@ -65,8 +62,6 @@ body {
 .green {
   background: #27c93f;
 }
-
-/* Removed .window-bar::after (the ESC text) */
 
 .lock-content {
   padding: 40px 20px;
@@ -107,7 +102,6 @@ body {
   box-shadow: 0px 0px 0px var(--black);
 }
 
-/* 3. Main Grid */
 body.main-grid-page {
   padding: 40px 20px;
 }
@@ -178,12 +172,12 @@ body.main-grid-page {
 }
 .card {
   border: 3px solid #000;
-  box-shadow: 8px 8px 0px 0px #000; /* Solid black offset shadow */
+  box-shadow: 8px 8px 0px 0px #000;
   transition: all 0.2s ease;
 }
 
 .card:active {
-  box-shadow: 2px 2px 0px 0px #000; /* "Pressed" effect */
+  box-shadow: 2px 2px 0px 0px #000;
   transform: translate(4px, 4px);
 }
 
@@ -232,7 +226,6 @@ body.main-grid-page {
   flex-grow: 1;
   font-size: 1.1rem;
   line-height: 1.4;
-  /* UPDATED FONT AND ALIGNMENT */
   font-family: "Space Mono", monospace;
   display: flex;
   align-items: center;
@@ -247,7 +240,6 @@ body.main-grid-page {
   font-size: 0.9rem;
 }
 
-/* 4. Modals */
 .modal {
   display: none;
   position: fixed;
@@ -328,7 +320,7 @@ body.main-grid-page {
 
 #modalBody {
   line-height: 1.6;
-  font-family: "Space Mono", monospace; /* Keeping that tech/bootleg feel */
+  font-family: "Space Mono", monospace;
 }
 
 @keyframes popIn {
@@ -345,20 +337,21 @@ body.main-grid-page {
   backdrop-filter: blur(2px);
 }
 .modal-content {
-  .modal-content {
-    background:
-      radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
-      #fff;
-  }
+  background:
+    radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
+    #fff;
   border-radius: 10px;
-  .card:active {
-    transform: translateY(-2px) scale(0.995);
-  }
-  .card {
-    cursor: pointer;
-  }
   padding: 32px 32px 26px;
 }
+
+.modal-content .card:active {
+  transform: translateY(-2px) scale(0.995);
+}
+
+.modal-content .card {
+  cursor: pointer;
+}
+
 @keyframes slideDown {
   from {
     transform: translateY(-20px);

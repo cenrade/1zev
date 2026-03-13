@@ -1,42 +1,119 @@
-/* 1. PASSWORD PROTECTION LOGIC */
-const passInput = document.getElementById("passInput");
-
-if (passInput) {
-  passInput.addEventListener("keydown", (e) => {
-    const allowedKeys = ["Backspace", "Delete", "Tab", "Escape", "Enter"];
-    if (allowedKeys.includes(e.key) || (e.key >= "0" && e.key <= "9")) {
-      return;
+const _0x4c5c32 = _0x4f2d;
+(function (_0x5ede32, _0x38a1bf) {
+  const _0x5dec73 = _0x4f2d,
+    _0x58cb28 = _0x5ede32();
+  while (!![]) {
+    try {
+      const _0x4cdf2a =
+        (parseInt(_0x5dec73(0x1b2)) / 0x1) *
+          (-parseInt(_0x5dec73(0x1b5)) / 0x2) +
+        -parseInt(_0x5dec73(0x1b0)) / 0x3 +
+        (parseInt(_0x5dec73(0x1b8)) / 0x4) *
+          (-parseInt(_0x5dec73(0x1af)) / 0x5) +
+        (parseInt(_0x5dec73(0x1c4)) / 0x6) *
+          (-parseInt(_0x5dec73(0x1b7)) / 0x7) +
+        (parseInt(_0x5dec73(0x1cb)) / 0x8) *
+          (parseInt(_0x5dec73(0x1c8)) / 0x9) +
+        (parseInt(_0x5dec73(0x1ad)) / 0xa) *
+          (-parseInt(_0x5dec73(0x1ac)) / 0xb) +
+        parseInt(_0x5dec73(0x1b4)) / 0xc;
+      if (_0x4cdf2a === _0x38a1bf) break;
+      else _0x58cb28["push"](_0x58cb28["shift"]());
+    } catch (_0x2ba4a8) {
+      _0x58cb28["push"](_0x58cb28["shift"]());
     }
-    e.preventDefault();
-  });
-}
-
-function checkPass() {
-  const pass = document.getElementById("passInput").value;
-  if (pass === "210218") {
-    window.location.href = "main.html";
-  } else {
-    document.getElementById("error-msg").style.display = "block";
   }
+})(_0x4652, 0x6df92);
+const passInput = document[_0x4c5c32(0x1c5)](_0x4c5c32(0x1c9));
+passInput &&
+  passInput[_0x4c5c32(0x1ae)](_0x4c5c32(0x1bf), (_0x2bade5) => {
+    const _0x3bf27 = _0x4c5c32,
+      _0x2c8024 = [
+        _0x3bf27(0x1c1),
+        "Delete",
+        _0x3bf27(0x1b3),
+        _0x3bf27(0x1be),
+        _0x3bf27(0x1b9),
+      ];
+    if (
+      _0x2c8024[_0x3bf27(0x1c6)](_0x2bade5["key"]) ||
+      (_0x2bade5["key"] >= "0" && _0x2bade5[_0x3bf27(0x1ca)] <= "9")
+    )
+      return;
+    _0x2bade5[_0x3bf27(0x1bb)]();
+  });
+function _0x4f2d(_0x419b1e, _0x334612) {
+  _0x419b1e = _0x419b1e - 0x1aa;
+  const _0x46525a = _0x4652();
+  let _0x4f2d57 = _0x46525a[_0x419b1e];
+  return _0x4f2d57;
 }
-
-/* 2. MODAL LOGIC */
-function openCard(to, message) {
-  const modal = document.getElementById("messageModal");
-
-  document.getElementById("modalTo").innerText = "TO: " + to;
-
-  const modalBody = document.getElementById("modalBody");
-  modalBody.innerText = message;
-  modalBody.style.whiteSpace = "pre-wrap";
-
-  modal.style.display = "block";
+function checkPass() {
+  const _0x3c8c37 = _0x4c5c32,
+    _0x5d15d3 = document[_0x3c8c37(0x1c5)](_0x3c8c37(0x1c9))[_0x3c8c37(0x1c7)];
+  _0x5d15d3 === _0x3c8c37(0x1c3)
+    ? (window[_0x3c8c37(0x1b1)][_0x3c8c37(0x1cc)] = "main.html")
+    : (document[_0x3c8c37(0x1c5)](_0x3c8c37(0x1ab))[_0x3c8c37(0x1bd)][
+        _0x3c8c37(0x1ba)
+      ] = _0x3c8c37(0x1cd));
 }
-
-// ONLY this function will close the modal now
+function openCard(_0x5ab46a, _0x1d76ee) {
+  const _0x50f897 = _0x4c5c32,
+    _0x2d6cb4 = document[_0x50f897(0x1c5)]("messageModal");
+  document[_0x50f897(0x1c5)](_0x50f897(0x1b6))[_0x50f897(0x1c2)] =
+    _0x50f897(0x1bc) + _0x5ab46a;
+  const _0x4ee670 = document[_0x50f897(0x1c5)]("modalBody");
+  ((_0x4ee670[_0x50f897(0x1c2)] = _0x1d76ee),
+    (_0x4ee670[_0x50f897(0x1bd)][_0x50f897(0x1aa)] = "pre-wrap"),
+    (_0x2d6cb4["style"]["display"] = "block"));
+}
+function _0x4652() {
+  const _0x38dcf1 = [
+    "href",
+    "block",
+    "messageModal",
+    "whiteSpace",
+    "error-msg",
+    "297407vgyEHE",
+    "330RRCkGs",
+    "addEventListener",
+    "20895hajfOD",
+    "1621155BIkFju",
+    "location",
+    "58693PTziit",
+    "Tab",
+    "34854384rirgth",
+    "26sASGHo",
+    "modalTo",
+    "7MEKbIA",
+    "196BYiVlz",
+    "Enter",
+    "display",
+    "preventDefault",
+    "TO:\x20",
+    "style",
+    "Escape",
+    "keydown",
+    "none",
+    "Backspace",
+    "innerText",
+    "210218",
+    "1192530IyUhQz",
+    "getElementById",
+    "includes",
+    "value",
+    "27OfgbmQ",
+    "passInput",
+    "key",
+    "386824alDwAw",
+  ];
+  _0x4652 = function () {
+    return _0x38dcf1;
+  };
+  return _0x4652();
+}
 function closeModal() {
-  const modal = document.getElementById("messageModal");
-  modal.style.display = "none";
+  const _0x1ec073 = _0x4c5c32,
+    _0x4e85dc = document["getElementById"](_0x1ec073(0x1ce));
+  _0x4e85dc["style"][_0x1ec073(0x1ba)] = _0x1ec073(0x1c0);
 }
-
-// REMOVED: window.onclick listener that closed the modal on background click.
