@@ -9,10 +9,18 @@
   --red-muted: #ff6b6b;
   --teal: #81e6d9;
   --lavender: #c3bef0;
-
   --custom-yellow: #f7cd52;
   --custom-green: #649c15;
   --custom-blue: #599edf;
+}
+
+/* FIX: LOCKS WIDTH TO PREVENT SIDE-SCROLLING/ZOOMING ON MOBILE */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+  touch-action: manipulation;
 }
 
 body {
@@ -135,14 +143,19 @@ body::after {
   box-shadow: 0px 0px 0px var(--black);
 }
 
+/* FIX: FORCES HEADER AND GRID TO BE CENTERED ON ALL SCREENS */
 body.main-grid-page {
-  padding: 40px 20px;
+  padding: 40px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
   text-align: center;
   margin-bottom: 60px;
   animation: slideDown 0.6s ease-out;
+  width: 100%;
 }
 
 .header h1 {
@@ -151,10 +164,13 @@ body.main-grid-page {
   margin: 0;
 }
 
+/* FIX: ENSURES GRID AUTO-CENTERS EVEN WHEN SCREEN IS SMALL */
 .container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
   gap: 40px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -327,7 +343,6 @@ body.main-grid-page {
     opacity: 1;
   }
 }
-
 @keyframes popIn {
   from {
     transform: scale(0.95);
@@ -338,7 +353,6 @@ body.main-grid-page {
     opacity: 1;
   }
 }
-
 @keyframes cardIn {
   to {
     opacity: 1;
