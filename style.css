@@ -3,7 +3,6 @@
   --black: #000000;
   --blue: #add8e6;
   --pink: #ffb6c1;
-  --yellow: #fffacd;
   --orange: #df9c21;
   --green: #98fb98;
   --purple: #e0b0ff;
@@ -176,7 +175,6 @@ body.main-grid-page {
 
 .card.blue,
 .card.pink,
-.card.yellow,
 .card.orange,
 .card.green,
 .card.purple,
@@ -206,9 +204,6 @@ body.main-grid-page {
 }
 .pink {
   background: var(--pink);
-}
-.yellow {
-  background: var(--yellow);
 }
 .orange {
   background: var(--orange);
