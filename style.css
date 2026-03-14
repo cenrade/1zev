@@ -175,6 +175,16 @@ body.main-grid-page {
   animation: cardIn 0.5s ease-out forwards;
 }
 
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 8px 8px 0px var(--black);
+}
+
+.card:active {
+  box-shadow: 2px 2px 0px 0px #000;
+  transform: translate(4px, 4px);
+}
+
 .card.blue,
 .card.pink,
 .card.orange,
@@ -326,6 +336,10 @@ body.main-grid-page {
   cursor: pointer;
   z-index: 10;
   transition: transform 0.2s;
+}
+
+.close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
 }
 
 @keyframes slideDown {
