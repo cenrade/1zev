@@ -1,119 +1,117 @@
-const _0x4c5c32 = _0x4f2d;
-(function (_0x5ede32, _0x38a1bf) {
-  const _0x5dec73 = _0x4f2d,
-    _0x58cb28 = _0x5ede32();
+const _0x591ce0 = _0x5628;
+function _0x5628(_0x4c8801, _0x489806) {
+  _0x4c8801 = _0x4c8801 - 0x126;
+  const _0x3e08c3 = _0x3e08();
+  let _0x562891 = _0x3e08c3[_0x4c8801];
+  return _0x562891;
+}
+(function (_0x1f0f88, _0x27d6ed) {
+  const _0x194b6d = _0x5628,
+    _0x176ec6 = _0x1f0f88();
   while (!![]) {
     try {
-      const _0x4cdf2a =
-        (parseInt(_0x5dec73(0x1b2)) / 0x1) *
-          (-parseInt(_0x5dec73(0x1b5)) / 0x2) +
-        -parseInt(_0x5dec73(0x1b0)) / 0x3 +
-        (parseInt(_0x5dec73(0x1b8)) / 0x4) *
-          (-parseInt(_0x5dec73(0x1af)) / 0x5) +
-        (parseInt(_0x5dec73(0x1c4)) / 0x6) *
-          (-parseInt(_0x5dec73(0x1b7)) / 0x7) +
-        (parseInt(_0x5dec73(0x1cb)) / 0x8) *
-          (parseInt(_0x5dec73(0x1c8)) / 0x9) +
-        (parseInt(_0x5dec73(0x1ad)) / 0xa) *
-          (-parseInt(_0x5dec73(0x1ac)) / 0xb) +
-        parseInt(_0x5dec73(0x1b4)) / 0xc;
-      if (_0x4cdf2a === _0x38a1bf) break;
-      else _0x58cb28["push"](_0x58cb28["shift"]());
-    } catch (_0x2ba4a8) {
-      _0x58cb28["push"](_0x58cb28["shift"]());
+      const _0xcbaf0f =
+        parseInt(_0x194b6d(0x13b)) / 0x1 +
+        parseInt(_0x194b6d(0x145)) / 0x2 +
+        (parseInt(_0x194b6d(0x13d)) / 0x3) *
+          (parseInt(_0x194b6d(0x133)) / 0x4) +
+        -parseInt(_0x194b6d(0x128)) / 0x5 +
+        -parseInt(_0x194b6d(0x13f)) / 0x6 +
+        -parseInt(_0x194b6d(0x12a)) / 0x7 +
+        (parseInt(_0x194b6d(0x144)) / 0x8) *
+          (-parseInt(_0x194b6d(0x140)) / 0x9);
+      if (_0xcbaf0f === _0x27d6ed) break;
+      else _0x176ec6["push"](_0x176ec6["shift"]());
+    } catch (_0x3e36cf) {
+      _0x176ec6["push"](_0x176ec6["shift"]());
     }
   }
-})(_0x4652, 0x6df92);
-const passInput = document[_0x4c5c32(0x1c5)](_0x4c5c32(0x1c9));
-passInput &&
-  passInput[_0x4c5c32(0x1ae)](_0x4c5c32(0x1bf), (_0x2bade5) => {
-    const _0x3bf27 = _0x4c5c32,
-      _0x2c8024 = [
-        _0x3bf27(0x1c1),
-        "Delete",
-        _0x3bf27(0x1b3),
-        _0x3bf27(0x1be),
-        _0x3bf27(0x1b9),
-      ];
-    if (
-      _0x2c8024[_0x3bf27(0x1c6)](_0x2bade5["key"]) ||
-      (_0x2bade5["key"] >= "0" && _0x2bade5[_0x3bf27(0x1ca)] <= "9")
-    )
-      return;
-    _0x2bade5[_0x3bf27(0x1bb)]();
-  });
-function _0x4f2d(_0x419b1e, _0x334612) {
-  _0x419b1e = _0x419b1e - 0x1aa;
-  const _0x46525a = _0x4652();
-  let _0x4f2d57 = _0x46525a[_0x419b1e];
-  return _0x4f2d57;
-}
-function checkPass() {
-  const _0x3c8c37 = _0x4c5c32,
-    _0x5d15d3 = document[_0x3c8c37(0x1c5)](_0x3c8c37(0x1c9))[_0x3c8c37(0x1c7)];
-  _0x5d15d3 === _0x3c8c37(0x1c3)
-    ? (window[_0x3c8c37(0x1b1)][_0x3c8c37(0x1cc)] = "main.html")
-    : (document[_0x3c8c37(0x1c5)](_0x3c8c37(0x1ab))[_0x3c8c37(0x1bd)][
-        _0x3c8c37(0x1ba)
-      ] = _0x3c8c37(0x1cd));
-} //The password is in ur note:)
-function openCard(_0x5ab46a, _0x1d76ee) {
-  const _0x50f897 = _0x4c5c32,
-    _0x2d6cb4 = document[_0x50f897(0x1c5)]("messageModal");
-  document[_0x50f897(0x1c5)](_0x50f897(0x1b6))[_0x50f897(0x1c2)] =
-    _0x50f897(0x1bc) + _0x5ab46a;
-  const _0x4ee670 = document[_0x50f897(0x1c5)]("modalBody");
-  ((_0x4ee670[_0x50f897(0x1c2)] = _0x1d76ee),
-    (_0x4ee670[_0x50f897(0x1bd)][_0x50f897(0x1aa)] = "pre-wrap"),
-    (_0x2d6cb4["style"]["display"] = "block"));
-}
-function _0x4652() {
-  const _0x38dcf1 = [
-    "href",
-    "block",
-    "messageModal",
-    "whiteSpace",
-    "error-msg",
-    "297407vgyEHE",
-    "330RRCkGs",
-    "addEventListener",
-    "20895hajfOD",
-    "1621155BIkFju",
-    "location",
-    "58693PTziit",
-    "Tab",
-    "34854384rirgth",
-    "26sASGHo",
-    "modalTo",
-    "7MEKbIA",
-    "196BYiVlz",
-    "Enter",
-    "display",
-    "preventDefault",
-    "TO:\x20",
+})(_0x3e08, 0x51099);
+const passInput = document["getElementById"]("passInput");
+function _0x3e08() {
+  const _0x5a8d5e = [
     "style",
-    "Escape",
-    "keydown",
-    "none",
-    "Backspace",
-    "innerText",
-    "210218",
-    "1192530IyUhQz",
-    "getElementById",
-    "includes",
     "value",
-    "27OfgbmQ",
-    "passInput",
+    "308240JxyZhF",
+    "block",
+    "Backspace",
     "key",
-    "386824alDwAw",
+    "modalTo",
+    "modalBody",
+    "preventDefault",
+    "whiteSpace",
+    "647183BWFEdy",
+    "addEventListener",
+    "24kHpKgB",
+    "error-msg",
+    "612936FDrquf",
+    "40518lodffj",
+    "includes",
+    "onclick",
+    "target",
+    "1048GcjnHy",
+    "159210racqrs",
+    "Tab",
+    "getElementById",
+    "none",
+    "Delete",
+    "253070sBYhxT",
+    "Escape",
+    "1881649SBLXQu",
+    "messageModal",
+    "display",
+    "innerText",
+    "archive.html",
+    "pre-wrap",
+    "210218",
   ];
-  _0x4652 = function () {
-    return _0x38dcf1;
+  _0x3e08 = function () {
+    return _0x5a8d5e;
   };
-  return _0x4652();
+  return _0x3e08();
+}
+passInput &&
+  passInput[_0x591ce0(0x13c)]("keydown", (_0x850608) => {
+    const _0x13a348 = _0x591ce0,
+      _0xdb9c77 = [
+        _0x13a348(0x135),
+        _0x13a348(0x127),
+        _0x13a348(0x146),
+        _0x13a348(0x129),
+        "Enter",
+      ],
+      _0x5a5332 =
+        _0x850608[_0x13a348(0x136)] >= "0" &&
+        _0x850608[_0x13a348(0x136)] <= "9";
+    if (_0xdb9c77[_0x13a348(0x141)](_0x850608["key"]) || _0x5a5332) return;
+    _0x850608[_0x13a348(0x139)]();
+  });
+function checkPass() {
+  const _0x1a6315 = _0x591ce0,
+    _0xab3af2 = document[_0x1a6315(0x147)]("passInput")[_0x1a6315(0x132)];
+  _0xab3af2 === _0x1a6315(0x130)
+    ? (window["location"]["href"] = _0x1a6315(0x12e))
+    : (document["getElementById"](_0x1a6315(0x13e))[_0x1a6315(0x131)][
+        _0x1a6315(0x12c)
+      ] = _0x1a6315(0x134));
+} //The password is in ur notes:)
+function openCard(_0x3e45b5, _0x168fda) {
+  const _0x1b0b00 = _0x591ce0,
+    _0x4bbdb6 = document[_0x1b0b00(0x147)]("messageModal"),
+    _0x52029c = document[_0x1b0b00(0x147)](_0x1b0b00(0x137)),
+    _0x3e6bef = document["getElementById"](_0x1b0b00(0x138));
+  ((_0x52029c[_0x1b0b00(0x12d)] = "TO:\x20" + _0x3e45b5),
+    (_0x3e6bef[_0x1b0b00(0x12d)] = _0x168fda),
+    (_0x3e6bef[_0x1b0b00(0x131)][_0x1b0b00(0x13a)] = _0x1b0b00(0x12f)),
+    (_0x4bbdb6[_0x1b0b00(0x131)][_0x1b0b00(0x12c)] = _0x1b0b00(0x134)));
 }
 function closeModal() {
-  const _0x1ec073 = _0x4c5c32,
-    _0x4e85dc = document["getElementById"](_0x1ec073(0x1ce));
-  _0x4e85dc["style"][_0x1ec073(0x1ba)] = _0x1ec073(0x1c0);
+  const _0xbbb9bf = _0x591ce0,
+    _0x2b2c2c = document[_0xbbb9bf(0x147)]("messageModal");
+  _0x2b2c2c["style"][_0xbbb9bf(0x12c)] = _0xbbb9bf(0x126);
 }
+window[_0x591ce0(0x142)] = function (_0x59b2a9) {
+  const _0x306ffd = _0x591ce0,
+    _0x59d0ac = document["getElementById"](_0x306ffd(0x12b));
+  _0x59b2a9[_0x306ffd(0x143)] === _0x59d0ac && closeModal();
+};
