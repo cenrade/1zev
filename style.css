@@ -9,9 +9,18 @@
   --red-muted: #ff6b6b;
   --teal: #81e6d9;
   --lavender: #c3bef0;
+
   --custom-yellow: #f7cd52;
   --custom-green: #649c15;
   --custom-blue: #599edf;
+}
+
+/* FIX: LOCKS VIEWPORT TO PREVENT ZOOMING/SLIDING */
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  touch-action: manipulation;
 }
 
 body {
@@ -134,8 +143,12 @@ body::after {
   box-shadow: 0px 0px 0px var(--black);
 }
 
+/* FIX: FORCES ALL CONTENT TO BE CENTERED */
 body.main-grid-page {
   padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -150,20 +163,23 @@ body.main-grid-page {
   margin: 0;
 }
 
+/* FIX: CENTERS THE GRID ITSELF */
 .container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .card {
-  border: 3px solid var(--black);
-  box-shadow: 6px 6px 0px var(--black);
+  border: 4px solid var(--black);
+  box-shadow: 10px 10px 0px var(--black);
   display: flex;
   flex-direction: column;
-  min-height: 180px;
+  min-height: 250px;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
@@ -188,8 +204,13 @@ body.main-grid-page {
 }
 
 .card:hover {
-  transform: translate(-3px, -3px);
-  box-shadow: 10px 10px 0px var(--black);
+  transform: translate(-5px, -5px);
+  box-shadow: 15px 15px 0px var(--black);
+}
+
+.card:active {
+  box-shadow: 2px 2px 0px 0px #000;
+  transform: translate(4px, 4px);
 }
 
 .blue {
@@ -218,19 +239,18 @@ body.main-grid-page {
 }
 
 .card-header {
-  border-bottom: 3px solid var(--black);
-  padding: 8px;
+  border-bottom: 4px solid var(--black);
+  padding: 10px;
   display: flex;
   justify-content: space-between;
   font-weight: bold;
-  font-size: 0.75rem;
 }
 
 .card-content {
-  padding: 15px;
+  padding: 25px;
   flex-grow: 1;
-  font-size: 0.85rem;
-  line-height: 1.3;
+  font-size: 1.1rem;
+  line-height: 1.4;
   font-family: "Space Mono", monospace;
   display: flex;
   align-items: center;
@@ -239,9 +259,11 @@ body.main-grid-page {
 }
 
 .card-footer {
-  border-top: 3px solid var(--black);
-  padding: 8px;
-  font-size: 0.7rem;
+  border-top: 4px solid var(--black);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
 }
 
 .modal {
@@ -255,7 +277,7 @@ body.main-grid-page {
   background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(2px);
   overflow-y: auto;
-  padding: 20px 0;
+  padding: 40px 0;
 }
 
 .modal-content {
@@ -265,67 +287,49 @@ body.main-grid-page {
   width: 90%;
   max-width: 650px;
   position: relative;
-  padding: 30px;
+  padding: 40px;
   animation: popIn 0.4s ease-out;
   background:
     radial-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px) 0 0/18px 18px,
     #fff;
   border-radius: 10px;
+  margin-bottom: 40px;
 }
 
 #modalTo {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   margin: 0;
   background: var(--black);
   color: white;
   display: inline-block;
-  padding: 5px 12px;
+  padding: 5px 15px;
 }
 
 .content-divider {
   border-top: 4px solid var(--black);
-  margin: 20px 0;
+  margin: 25px 0;
 }
 
 #modalBody {
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.2rem;
+  line-height: 1.6;
   font-family: "Space Mono", monospace;
   word-wrap: break-word;
 }
 
 .close-btn {
   position: absolute;
-  top: 5px;
-  right: 10px;
-  font-size: 30px;
+  top: 10px;
+  right: 15px;
+  font-size: 35px;
+  font-weight: bold;
   cursor: pointer;
+  z-index: 10;
+  transition: transform 0.2s;
 }
 
-@media (min-width: 768px) {
-  .container {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px;
-  }
-  .card {
-    border: 4px solid var(--black);
-    box-shadow: 10px 10px 0px var(--black);
-    min-height: 250px;
-  }
-  .card-header {
-    font-size: 1rem;
-    padding: 10px;
-  }
-  .card-content {
-    font-size: 1.1rem;
-    padding: 25px;
-  }
-  #modalTo {
-    font-size: 1.8rem;
-  }
-  #modalBody {
-    font-size: 1.2rem;
-  }
+.close-btn:hover {
+  transform: scale(1.2) rotate(90deg);
 }
 
 @keyframes slideDown {
